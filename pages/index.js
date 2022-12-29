@@ -22,7 +22,7 @@ function IndexPage(props) {
   return (
     <div className="my-8">
       <div className="mt-4">
-        <ProductsPage products={products} />
+        <ProductsPage products={products} />k
       </div>
     </div>
   );
