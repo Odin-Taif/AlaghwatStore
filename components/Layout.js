@@ -77,21 +77,9 @@ function Layout({ children }) {
             } sm:flex sm:justify-center sm:items-center mt-4`}
           >
             <div className="flex flex-col sm:flex-row">
-              <Link href="/">
-                <a className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0">
-                  Home
-                </a>
-              </Link>
-              <Link href="/products">
-                <a className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0">
-                  Shop
-                </a>
-              </Link>
-              <Link href="/about">
-                <a className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0">
-                  About
-                </a>
-              </Link>
+              <Link href="/">Home</Link>
+              <Link href="/products">Shop</Link>
+              <Link href="/about">About</Link>
             </div>
           </nav>
           <div className="relative mt-6 max-w-lg mx-auto">
