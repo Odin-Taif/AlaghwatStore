@@ -40,6 +40,3 @@ npm start
 ```
 This will run the frontend at http://localhost:3000 and the Sanity Studio at http://localhost:3000/studio
 
-## Credits
-
-The e-commerce frontend is built with Tailwind components by [khatabwedaa](https://tailwindcomponents.com/u/khatabwedaa).
