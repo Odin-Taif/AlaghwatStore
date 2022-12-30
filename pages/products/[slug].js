@@ -3,6 +3,7 @@ import { groq } from "next-sanity";
 import { useRouter } from "next/router";
 import ProductPage from "../../components/ProductPage";
 import { getClient, usePreviewSubscription } from "../../utils/sanity";
+import CompanyProducts from "../../components/companyProducts";
 
 const query = groq`*[_type == "product" && slug.current == $slug][0]`;
 
@@ -31,18 +32,21 @@ function ProductPageContainer({ productData, preview }) {
     slug,
   } = product;
   return (
-    <ProductPage
-      id={_id}
-      title={title}
-      defaultProductVariant={defaultProductVariant}
-      mainImage={mainImage}
-      blurb={blurb}
-      body={body}
-      tags={tags}
-      vendor={vendor}
-      categories={categories}
-      slug={slug?.current}
-    />
+    <>
+      <ProductPage
+        id={_id}
+        title={title}
+        defaultProductVariant={defaultProductVariant}
+        mainImage={mainImage}
+        blurb={blurb}
+        body={body}
+        tags={tags}
+        vendor={vendor}
+        categories={categories}
+        slug={slug?.current}
+      />
+      <CompanyProducts />
+    </>
   );
 }
 
