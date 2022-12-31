@@ -1,17 +1,18 @@
 import Link from "next/link";
 import { urlFor } from "../utils/sanity";
 
-function ProductCard({ _id, title, mainImage, slug, defaultProductVariant }) {
+function BrandCard({ _id, name, logo }) {
+  console.log(logo);
   return (
-    <div className="flex flex-col mx-10  my-5 items-center justify-center hover:scale-125 duration-100 rounded border-2 border-y-teal-300">
+    <div className="flex flex-col mx-auto  my-auto items-center justify-center">
       <Link
         href={`/products`}
         className="flex mx-auto items-center justify-center h-auto w-auto"
       >
         <div
-          className=" flex mx-auto items-center justify-center h-40 w-40 bg-cover cursor-pointer "
+          className=" flex mx-auto items-center justify-center h-20 w-20 bg-cover rounded-full border-2 border-y-teal-300  cursor-pointer hover:scale-125 duration-75"
           style={{
-            backgroundImage: `url('${urlFor(mainImage)
+            backgroundImage: `url('${urlFor(logo)
               .auto("format")
               .fit("crop")
               .width(200)
@@ -34,7 +35,7 @@ function ProductCard({ _id, title, mainImage, slug, defaultProductVariant }) {
         </div>
       </Link>
       <div className="px-5 py-3">
-        <h3 className="text-center text-gray-700 uppercase">{title}</h3>
+        <h3 className="text-center text-gray-700 uppercase">{name}</h3>
         {/* <span className="text-center text-gray-500 mt-2">
           ${defaultProductVariant?.price}
         </span> */}
@@ -43,4 +44,4 @@ function ProductCard({ _id, title, mainImage, slug, defaultProductVariant }) {
   );
 }
 
-export default ProductCard;
+export default BrandCard;

@@ -1,15 +1,15 @@
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
-
 import Link from "next/link";
 import Image from "next/image";
-import meBirlin from "../public/Assests/webP/meBirlingym.webp";
+import logo from "../public/Assests/webP/logo.webp";
+import { useRouter } from "next/router";
 const navigation = [
-  { name: "Dashboard", href: "#", current: true },
-  { name: "Team", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "Calendar", href: "#", current: false },
+  { name: "Hem", href: "/", current: false },
+  { name: "Produkter", href: "/products", current: false },
+  { name: "Kontakt", href: "/contact", current: false },
+  { name: "Om Oss", href: "/about", current: false },
 ];
 
 function classNames(...classes) {
@@ -17,6 +17,8 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
+  const router = useRouter();
+  console.log(router.asPath);
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -35,34 +37,39 @@ export default function Navbar() {
                 </Disclosure.Button>
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex flex-shrink-0 items-center">
-                  <Image
-                    className="block h-8 w-auto lg:hidden"
-                    src={meBirlin}
-                    alt="Your Company"
-                    width={"100"}
-                    height={"100"}
-                  />
-                  <Image
-                    className="hidden h-8 w-auto lg:block"
-                    src={meBirlin}
-                    alt="Your Company"
-                    width={"100"}
-                    height={"100"}
-                  />
-                </div>
+                <Link
+                  href={"/"}
+                  className="border-2 rounded-sm border-teal-200 hover:border-x-indigo-500"
+                >
+                  <div className="flex flex-shrink-0 items-left">
+                    <Image
+                      className="block h-8 w-auto lg:hidden "
+                      src={logo}
+                      alt="VästråsTech"
+                      width={"150"}
+                      height={"150"}
+                    />
+                    <Image
+                      className="hidden h-8 w-auto lg:block"
+                      src={logo}
+                      alt="VästråsTech"
+                      width={"150"}
+                      height={"150"}
+                    />
+                  </div>
+                </Link>
+
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <Link
                         key={item.name}
                         href={item.href}
-                        className={classNames(
-                          item.current
-                            ? "bg-gray-900 text-white"
-                            : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                          "px-3 py-2 rounded-md text-sm font-medium"
-                        )}
+                        className={
+                          router.asPath === item.href
+                            ? "bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                            : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                        }
                         aria-current={item.current ? "page" : undefined}
                       >
                         {item.name}
@@ -72,16 +79,16 @@ export default function Navbar() {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <button
+                {/* <button
                   type="button"
                   className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
                   <span className="sr-only">View notifications</span>
                   <BellIcon className="h-6 w-6" aria-hidden="true" />
-                </button>
+                </button> */}
 
                 {/* Profile dropdown */}
-                <Menu as="div" className="relative ml-3">
+                {/* <Menu as="div" className="relative ml-3">
                   <div>
                     <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="sr-only">Open user menu</span>
@@ -143,7 +150,7 @@ export default function Navbar() {
                       </Menu.Item>
                     </Menu.Items>
                   </Transition>
-                </Menu>
+                </Menu> */}
               </div>
             </div>
           </div>
