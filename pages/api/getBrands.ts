@@ -3,10 +3,9 @@ import { groq } from "next-sanity";
 import { NextApiRequest, NextApiResponse } from "next/types";
 import { sanityClient } from "../../utils/sanity";
 
-const query = groq`*[_type=="brand"]{
-  name,
-    ...
-}`;
+const query = `//groq
+  *[_type == "brand"]
+`;
 type Data = {
   brands: any;
 };
