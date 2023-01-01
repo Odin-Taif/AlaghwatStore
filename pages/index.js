@@ -9,6 +9,9 @@ import Image from "next/image";
 const query = `//groq
   *[_type == "product" && defined(slug.current)]
 `;
+const queryBrands = `//groq
+  *[_type == "brand"]
+`;
 
 function IndexPage(props) {
   const { productsData, preview, brands } = props;
@@ -49,7 +52,7 @@ function IndexPage(props) {
 
 export async function getStaticProps({ params = {}, preview = false }) {
   const productsData = await getClient(preview).fetch(query);
-  const brands = await fetchBrands();
+  const brands = await getClient(preview).fetch(queryBrands);
 
   return {
     props: {
