@@ -2,7 +2,7 @@ import Link from "next/link";
 import { urlFor } from "../utils/sanity";
 
 function BrandCard({ _id, name, logo }) {
-  console.log(logo);
+  // console.log(logo);
   return (
     <div className="flex flex-col mx-auto  my-auto items-center justify-center">
       <Link
