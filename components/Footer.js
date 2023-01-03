@@ -32,31 +32,30 @@ export default function Footer() {
                 Låt oss hålla kontakten!
               </h4>
               <h5 className="text-lg mt-0 mb-2 text-blueGray-600">
-                Hitta oss på någon av dessa plattformar, vi svarar 1-2
-                arbetsdagar.
+                Hitta oss på någon av dessa plattformar.
               </h5>
               <div className="mt-6 lg:mb-0 mb-6">
                 <button
-                  className="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                  className="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2  hover:bg-sky-700"
                   type="button"
                 >
                   <FaInstagram size={20} className="mx-auto" />
                 </button>
                 <button
-                  className="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                  className="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2  hover:bg-sky-700"
                   type="button"
                 >
                   <FaFacebookF size={20} className="mx-auto" />
                 </button>
 
                 <button
-                  className="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                  className="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2  hover:bg-sky-700"
                   type="button"
                 >
                   <FaMailBulk size={20} className="mx-auto" />
                 </button>
                 <button
-                  className="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                  className="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2  hover:bg-sky-700"
                   type="button"
                 >
                   <FaMobileAlt size={20} className="mx-auto" />
