@@ -1,5 +1,11 @@
 import Link from "next/link";
-import { FaTwitter, FaFacebookF } from "react-icons/fa";
+import {
+  FaTwitter,
+  FaInstagram,
+  FaFacebookF,
+  FaMailBulk,
+  FaMobileAlt,
+} from "react-icons/fa";
 export default function Footer() {
   return (
     <>
@@ -34,7 +40,7 @@ export default function Footer() {
                   className="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                   type="button"
                 >
-                  <FaTwitter size={20} className="mx-auto" />
+                  <FaInstagram size={20} className="mx-auto" />
                 </button>
                 <button
                   className="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
@@ -42,17 +48,18 @@ export default function Footer() {
                 >
                   <FaFacebookF size={20} className="mx-auto" />
                 </button>
+
                 <button
-                  className="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                  className="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                   type="button"
                 >
-                  <FaTwitter size={20} className="mx-auto" />
+                  <FaMailBulk size={20} className="mx-auto" />
                 </button>
                 <button
                   className="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                   type="button"
                 >
-                  <FaTwitter size={20} className="mx-auto" />
+                  <FaMobileAlt size={20} className="mx-auto" />
                 </button>
               </div>
             </div>
@@ -99,7 +106,7 @@ export default function Footer() {
                 </div> */}
                 <div className="w-full lg:w-4/12 px-4">
                   <span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2">
-                    Other Resources
+                    Mer info
                   </span>
                   <ul className="list-unstyled">
                     <li>
