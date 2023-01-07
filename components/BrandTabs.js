@@ -7,9 +7,8 @@ function classNames(...classes) {
 }
 
 export default function BrandTabs({ brands }) {
-  console.log(brands);
   return (
-    <div className="w-full px-2 py-2 sm:px-0">
+    <div className="w-full px-0 py-2">
       <Tab.Group>
         <Tab.List className="flex space-x-1 rounded-xl bg-blue-900/20 p-1">
           {brands.map((brand) => (
