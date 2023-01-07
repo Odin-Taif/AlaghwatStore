@@ -7,7 +7,7 @@ import logo from "../public/Assests/webP/logo.webp";
 import { useRouter } from "next/router";
 const navigation = [
   { name: "Hem", href: "/", current: false },
-  { name: "Produkter", href: "/products", current: false },
+  // { name: "Produkter", href: "/products", current: false },
   { name: "Kontakt", href: "/contact", current: false },
   { name: "Om Oss", href: "/about", current: false },
 ];

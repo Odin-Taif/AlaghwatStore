@@ -15,18 +15,14 @@
 export default function Contact() {
   return (
     <>
-      <div className="mt-10 sm:mt-0">
-        <div className="md:grid md:grid-cols-3 md:gap-6">
-          <div className="px-4 mx-4 my-4 sm:px-0">
-            <h3 className="text-lg font-medium leading-6 text-gray-900">
-              Personal Information
-            </h3>
-            <p className="mt-1 text-sm text-gray-600">
-              Use a permanent address where you can receive mail.
-            </p>
-          </div>
-          <div className="md:col-span-1"></div>
+      <div className="flex content-center justify-center bg-slate-900 m-auto mt-10 sm:mt-0">
+        <div className="md:grid md:grid-cols-1 md:gap-6">
           <div className="mt-5 md:col-span-2 md:mt-0">
+            {/* <div className="px-4 mx-4 my-4">
+              <h3 className="text-lg font-medium leading-6 text-white">
+                Berätta gärna vad vill du ha hjälp med så når dig inom kort.
+              </h3>
+            </div> */}
             <form action="#" method="POST">
               <div className="overflow-hidden shadow sm:rounded-md">
                 <div className="bg-white px-4 py-5 sm:p-6">
@@ -43,7 +39,7 @@ export default function Contact() {
                         name="first-name"
                         id="first-name"
                         autoComplete="given-name"
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        className="mt-1  p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                       />
                     </div>
 
@@ -59,7 +55,7 @@ export default function Contact() {
                         name="last-name"
                         id="last-name"
                         autoComplete="family-name"
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        className="mt-1   p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                       />
                     </div>
 
@@ -75,7 +71,7 @@ export default function Contact() {
                         name="email-address"
                         id="email-address"
                         autoComplete="email"
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                       />
                     </div>
 
@@ -90,11 +86,9 @@ export default function Contact() {
                         id="country"
                         name="country"
                         autoComplete="country-name"
-                        className="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                        className="mt-1  p-2 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                       >
-                        <option>United States</option>
-                        <option>Canada</option>
-                        <option>Mexico</option>
+                        <option>Sverige</option>
                       </select>
                     </div>
 
@@ -110,7 +104,7 @@ export default function Contact() {
                         name="street-address"
                         id="street-address"
                         autoComplete="street-address"
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        className="mt-1  p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                       />
                     </div>
 
@@ -126,7 +120,7 @@ export default function Contact() {
                         name="city"
                         id="city"
                         autoComplete="address-level2"
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        className="mt-1  p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                       />
                     </div>
 
@@ -142,7 +136,7 @@ export default function Contact() {
                         name="region"
                         id="region"
                         autoComplete="address-level1"
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        className="mt-1  p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                       />
                     </div>
 
@@ -158,7 +152,7 @@ export default function Contact() {
                         name="postal-code"
                         id="postal-code"
                         autoComplete="postal-code"
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        className="mt-1  p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                       />
                     </div>
                   </div>
