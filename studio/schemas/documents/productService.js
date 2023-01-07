@@ -9,37 +9,17 @@ export default {
       type: "string",
     },
     {
-      title: "Weight in grams",
-      name: "grams",
-      type: "number",
-    },
-    {
       title: "Price",
       name: "price",
       type: "number",
     },
-    // {
-    //   title: "SKU",
-    //   name: "sku",
-    //   type: "string",
-    // },
-    // {
-    //   title: "Taxable",
-    //   name: "taxable",
-    //   type: "boolean",
-    // },
     {
-      name: "images",
-      title: "Images",
-      type: "array",
-      of: [
-        {
-          type: "image",
-          options: {
-            hotspot: true,
-          },
-        },
-      ],
+      title: "Main image",
+      name: "mainImage",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
     },
   ],
 };

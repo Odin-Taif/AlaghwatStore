@@ -32,8 +32,8 @@ function IndexPage(props) {
       <div className="mt-1">
         <HeaderSection />
         <div className="container mx-auto px-6">
-          <h1 className=" text-sky-800 text-4xl font-semibold mx-auto my-10 px-6">
-            Vad vill du laga?
+          <h1 className=" text-sky-800 text-4xl font-semibold mx-auto my-3 px-1">
+            Välj vad vill du laga?
           </h1>
           {/* <h3 className="text-gray-700 text-2xl font-medium">Juices</h3> */}
           {/* <span className="mt-3 text-sm text-gray-500">The Juicy bits.</span> */}

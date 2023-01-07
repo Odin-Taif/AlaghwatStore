@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { Tab } from "@headlessui/react";
 import BrandCard from "../components/BrandCard";
+import { urlFor } from "../utils/sanity";
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function BrandTabs({ brands }) {
+  console.log(brands);
   return (
     <div className="w-full max-w-md px-2 py-2 sm:px-0">
       <Tab.Group>
@@ -41,19 +43,21 @@ export default function BrandTabs({ brands }) {
                 {brand.services.map((service) => (
                   <li
                     key={service._key}
-                    className="relative rounded-md p-3 my-2 bg-gray-100 hover:bg-blue-100 "
+                    className="flex justify-between relative rounded-md p-3 my-2 bg-gray-100 hover:bg-blue-100 "
                   >
                     <h3 className="text-sm font-medium leading-5">
                       {service.title}
                     </h3>
-
-                    {/* <ul className="mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-500">
-                      <li>{post.date}</li>
-                      <li>&middot;</li>
-                      <li>{post.commentCount} comments</li>
-                      <li>&middot;</li>
-                      <li>{post.shareCount} shares</li>
-                    </ul> */}
+                    <div
+                      className=" h-10 w-10 bg-cover rounded-full border-2 border-y-teal-300"
+                      style={{
+                        backgroundImage: `url('${urlFor(service.mainImage)
+                          .auto("format")
+                          .fit("crop")
+                          .width(100)
+                          .quality(80)}`,
+                      }}
+                    />
 
                     <a
                       href="#"
