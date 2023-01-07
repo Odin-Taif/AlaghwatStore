@@ -4,7 +4,7 @@ import { getClient, usePreviewSubscription } from "../utils/sanity";
 import { fetchBrands } from "../utils/fetchBrands";
 import HeaderSection from "../components/HeaderSection";
 import ProductCard from "../components/ProductCard";
-import BrandCard from "../components/BrandCard";
+import BrandTabs from "../components/BrandTabs";
 import Image from "next/image";
 const query = `//groq
   *[_type == "product" && defined(slug.current)]
@@ -25,13 +25,13 @@ function IndexPage(props) {
     enabled: preview || router.query.preview !== null,
   });
 
-  console.log(brands);
+  // console.log(brands);
 
   return (
-    <div className="my-8">
-      <div className="mt-4">
+    <div className="my-0">
+      <div className="mt-1">
         <HeaderSection />
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-auto">
           {/* <h3 className="text-gray-700 text-2xl font-medium">Juices</h3> */}
           {/* <span className="mt-3 text-sm text-gray-500">The Juicy bits.</span> */}
           {/* <div className="grid gap-2 grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6 ">
@@ -39,10 +39,8 @@ function IndexPage(props) {
               <ProductCard key={product._id} {...product} />
             ))}
           </div> */}
-          <div className="grid gap-2 grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6 ">
-            {brands.map((brand) => (
-              <BrandCard key={brand._id} {...brand} />
-            ))}
+          <div className="grid gap-2 grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1 mt-2 ">
+            <BrandTabs brands={brands} />
           </div>
         </div>
       </div>

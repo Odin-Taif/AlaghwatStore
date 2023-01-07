@@ -21,6 +21,17 @@ export default {
         hotspot: true,
       },
     },
+    {
+      title: "Services",
+      name: "services",
+      type: "array",
+      of: [
+        {
+          title: "Service",
+          type: "productService",
+        },
+      ],
+    },
   ],
   preview: {
     select: {
