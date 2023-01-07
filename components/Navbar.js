@@ -158,9 +158,8 @@ export default function Navbar() {
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 px-2 pt-2 pb-3">
               {navigation.map((item) => (
-                <Link href={item.href}>
+                <Link href={item.href} key={item.name}>
                   <Disclosure.Button
-                    key={item.name}
                     className={classNames(
                       item.current
                         ? "bg-gray-900 text-white"
