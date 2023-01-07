@@ -35,17 +35,31 @@ export default function Footer() {
                 Hitta oss på någon av dessa plattformar.
               </h5>
               <div className=" flex flex-row mt-6 lg:mb-0 mb-6">
-                <a className="bg-white  p-2 text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2  hover:bg-sky-700">
+                <a
+                  href="https://www.instagram.com/vasteras_tech_ab/?igshid=YmMyMTA2M2Y="
+                  target="_blank"
+                  className="bg-white  p-2 text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2  hover:bg-sky-700"
+                >
                   <FaInstagram size={20} className="mx-auto" />
                 </a>
-                <a className="bg-white p-2 text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2  hover:bg-sky-700">
+                <a
+                  href="https://www.facebook.com/people/V%C3%A4ster%C3%A5s-Tech/100083006367510/"
+                  target="_blank"
+                  className="bg-white p-2 text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2  hover:bg-sky-700"
+                >
                   <FaFacebookF size={20} className="mx-auto" />
                 </a>
 
-                <a className="bg-white p-2 text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2  hover:bg-sky-700">
+                <a
+                  href="mailto:vasteras.tech@gmail.com"
+                  className="bg-white p-2 text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2  hover:bg-sky-700"
+                >
                   <FaMailBulk size={20} className="mx-auto" />
                 </a>
-                <a className="bg-white p-2 text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2  hover:bg-sky-700">
+                <a
+                  href="tel:+46 76 913 69 31"
+                  className="bg-white p-2 text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2  hover:bg-sky-700"
+                >
                   <FaMobileAlt size={20} className="mx-auto" />
                 </a>
               </div>

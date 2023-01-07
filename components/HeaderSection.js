@@ -10,7 +10,7 @@ function HeaderSection() {
           <h1 className="mb-1 max-w-2xl text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl text-white">
             Västerås Tech AB.
           </h1>
-          <h1 className="mb-1 max-w-2xl text-2xl font-extrabold leading-none md:text-2xl sm:text-6xl text-white">
+          <h1 className="mb-1 p-4 max-w-2xl text-2xl font-extrabold leading-none md:text-2xl sm:text-6xl text-white">
             Där allting lagas på nytt.
           </h1>
 
@@ -22,7 +22,7 @@ function HeaderSection() {
           </a> */}
           <Link
             href="/contact"
-            className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center rounded border border-gray-300 focus:ring-4 text-white "
+            className="inline-flex m-4 justify-center items-center py-3 px-5 text-base font-medium text-center rounded border border-gray-300 focus:ring-4 text-white "
           >
             Kontakta Oss
           </Link>
