@@ -11,7 +11,6 @@ const navigation = [
   { name: "Kontakt", href: "mailto:vasteras.tech@gmail.com", current: false },
   { name: "Om Oss", href: "/about", current: false },
 ];
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }

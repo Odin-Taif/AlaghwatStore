@@ -21,7 +21,7 @@ function HeaderSection() {
             Ring Oss
           </a> */}
           <Link
-            href="/contact"
+            href="mailto:vasteras.tech@gmail.com"
             className="inline-flex m-4 justify-center items-center py-3 px-5 text-base font-medium text-center rounded border border-gray-300 focus:ring-4 text-white "
           >
             Kontakta Oss

@@ -57,7 +57,7 @@ export default function Footer() {
                   <FaMailBulk size={20} className="mx-auto" />
                 </a>
                 <a
-                  href="tel:+46 76 913 69 31"
+                  href="tel:+46769136931"
                   className="bg-white p-2 text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2  hover:bg-sky-700"
                 >
                   <FaMobileAlt size={20} className="mx-auto" />
