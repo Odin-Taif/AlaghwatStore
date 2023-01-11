@@ -51,7 +51,7 @@ function IndexPage(props) {
   );
 }
 
-export async function getStaticProps({ params = {}, preview = false }) {
+export async function getServerSideProps({ params = {}, preview = false }) {
   const productsData = await getClient(preview).fetch(query);
   const brands = await getClient(preview).fetch(queryBrands);
 
