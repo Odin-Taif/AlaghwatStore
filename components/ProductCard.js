@@ -6,7 +6,7 @@ function ProductCard({ _id, title, mainImage, slug, defaultProductVariant }) {
   return (
     <div className="flex flex-col mx-10  my-5 items-center justify-center hover:scale-90 duration-100 rounded border-2 border-y-teal-300">
       <Link
-        href={`/products`}
+        href={`/`}
         className="flex mx-auto items-center justify-center h-auto w-auto"
       >
         <Image

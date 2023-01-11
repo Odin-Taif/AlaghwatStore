@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Tab } from "@headlessui/react";
 import BrandCard from "../components/BrandCard";
 import { urlFor } from "../utils/sanity";
+import Link from "next/link";
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
@@ -61,8 +62,8 @@ export default function BrandTabs({ brands }) {
                       />
                     </div>
 
-                    <a
-                      href="#"
+                    <Link
+                      href={`/products`}
                       className={classNames(
                         "absolute inset-0 rounded-md",
                         "ring-blue-400 focus:z-10 focus:outline-none focus:ring-2"
