@@ -17,19 +17,20 @@ const hiddenDocTypes = (listItem) =>
     "person",
     "sampleProject",
     "vendor",
+    "product",
     "siteSettings",
     "ad",
     "page",
-    "product",
     "route",
     "siteConfig",
   ].includes(listItem.getId());
 
 export default () =>
   S.list()
-    .title("Pulp Inc.")
+    .title("Vastras")
     .items([
       S.documentTypeListItem("product").title("Products"),
+      S.documentTypeListItem("vendor").title("Vendors"),
       S.listItem()
         .title("Website")
         .icon(MdWeb)

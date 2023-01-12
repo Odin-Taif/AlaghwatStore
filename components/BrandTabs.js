@@ -7,14 +7,15 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function BrandTabs({ brands }) {
+export default function BrandTabs({ vendors }) {
+  // console.log(brands);
   return (
     <div className="w-full px-0 py-2">
       <Tab.Group>
         <Tab.List className="flex space-x-1 rounded-xl bg-blue-900/20 p-1">
-          {brands.map((brand) => (
+          {vendors.map((vendor) => (
             <Tab
-              key={brand._id}
+              key={vendor._id}
               className={({ selected }) =>
                 classNames(
                   "w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-blue-700",
@@ -25,22 +26,22 @@ export default function BrandTabs({ brands }) {
                 )
               }
             >
-              <BrandCard key={brand._id} {...brand} />
+              <BrandCard key={vendor._id} {...vendor} />
             </Tab>
           ))}
         </Tab.List>
 
         <Tab.Panels className="mt-2 mb-80">
-          {brands.map((brand) => (
+          {vendors.map((vendor) => (
             <Tab.Panel
-              key={brand._id}
+              key={vendor._id}
               className={classNames(
                 "rounded-xl bg-white p-1",
                 "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2"
               )}
             >
               <ul>
-                {brand.services.map((service) => (
+                {vendor.devices.map((service) => (
                   <li
                     key={service._key}
                     className="flex justify-between relative rounded-md p-3 my-2 bg-gray-100 hover:bg-blue-100 "

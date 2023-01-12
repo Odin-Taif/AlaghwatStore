@@ -12,9 +12,13 @@ const query = `//groq
 const queryBrands = `//groq
   *[_type == "brand"]
 `;
+const queryVendor = `//groq
+  *[_type == "vendor"]
+`;
 
 function IndexPage(props) {
-  const { productsData, preview, brands } = props;
+  const { productsData, preview, brands, vendors } = props;
+
   const router = useRouter();
 
   if (!router.isFallback && !productsData) {
@@ -26,6 +30,7 @@ function IndexPage(props) {
   });
 
   // console.log(brands);
+  console.log(vendors);
 
   return (
     <div className="my-0">
@@ -43,7 +48,7 @@ function IndexPage(props) {
             ))}
           </div> */}
           <div className="grid gap-2 grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1 mt-2 ">
-            <BrandTabs brands={brands} />
+            <BrandTabs vendors={vendors} />
           </div>
         </div>
       </div>
@@ -54,12 +59,14 @@ function IndexPage(props) {
 export async function getServerSideProps({ params = {}, preview = false }) {
   const productsData = await getClient(preview).fetch(query);
   const brands = await getClient(preview).fetch(queryBrands);
+  const vendors = await getClient(preview).fetch(queryVendor);
 
   return {
     props: {
       preview,
       productsData,
       brands,
+      vendors,
     },
   };
 }

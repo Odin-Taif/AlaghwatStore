@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { urlFor } from "../utils/sanity";
 
-function BrandCard({ _id, name, logo }) {
+function BrandCard({ _id, title, logo }) {
   // console.log(logo);
   return (
     <div className="flex flex-col mx-auto  my-auto items-center justify-center">
@@ -35,7 +35,7 @@ function BrandCard({ _id, name, logo }) {
       </div>
       {/* </Link> */}
       <div className="px-5 py-3">
-        <h3 className="text-center text-gray-700 uppercase">{name}</h3>
+        <h3 className="text-center text-gray-700 uppercase">{title}</h3>
         {/* <span className="text-center text-gray-500 mt-2">
           ${defaultProductVariant?.price}
         </span> */}

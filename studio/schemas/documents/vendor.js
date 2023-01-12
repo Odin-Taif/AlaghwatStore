@@ -24,10 +24,33 @@ export default {
       options: { hotspot: true },
     },
     {
-      name: "description",
-      title: "Description",
-      type: "blockContent",
+      title: "Device Type",
+      name: "devices",
+      type: "array",
+      of: [
+        {
+          title: "Device",
+          type: "deviceName",
+        },
+      ],
     },
+    {
+      title: "DeviceType",
+      name: "devicess",
+      type: "array",
+      of: [
+        {
+          title: "Device",
+          type: "deviceName",
+        },
+      ],
+    },
+
+    // {
+    //   name: "description",
+    //   title: "Description",
+    //   type: "blockContent",
+    // },
   ],
   preview: {
     select: {

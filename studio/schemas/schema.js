@@ -8,7 +8,7 @@ import category from "./documents/category";
 import product from "./documents/product";
 import vendor from "./documents/vendor";
 import productVariant from "./documents/productVariant";
-import productService from "./documents/productService";
+import deviceName from "./documents/deviceName";
 import brand from "./documents/brand";
 import social from "./documents/social";
 import ad from "./documents/ad";
@@ -18,6 +18,7 @@ import route from "./documents/route";
 import siteConfig from "./documents/siteConfig";
 import person from "./documents/person";
 import popup from "./documents/popup";
+import devices from "./documents/devices";
 
 // Object types
 import blockContent from "./objects/blockContent";
@@ -47,10 +48,11 @@ export default createSchema({
   types: schemaTypes.concat([
     // The following are document types which will appear
     // in the studio.
+    vendor,
     product,
     popup,
-    vendor,
     category,
+    devices,
     brand,
     social,
     ad,
@@ -75,6 +77,6 @@ export default createSchema({
     localeBlockContent,
     localeString,
     productVariant,
-    productService,
+    deviceName,
   ]),
 });

@@ -1,6 +1,6 @@
 export default {
-  title: "appleProducts",
-  name: "productService",
+  title: "deviceName",
+  name: "deviceName",
   type: "object",
   fields: [
     {
@@ -8,11 +8,11 @@ export default {
       name: "title",
       type: "string",
     },
-    {
-      title: "Price",
-      name: "price",
-      type: "number",
-    },
+    // {
+    //   title: "Price",
+    //   name: "price",
+    //   type: "number",
+    // },
     {
       title: "Main image",
       name: "mainImage",
