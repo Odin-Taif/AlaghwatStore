@@ -5,9 +5,12 @@ import { fetchBrands } from "../utils/fetchBrands";
 import HeaderSection from "../components/HeaderSection";
 import ProductCard from "../components/ProductCard";
 import BrandTabs from "../components/BrandTabs";
-import Image from "next/image";
-const query = `//groq
-  *[_type == "product" && defined(slug.current)]
+
+const query = `*[_type == "vendor"]{
+  _id, title,
+  "products": *[_type == "product" && references(^._id)]{title, ...},
+  ...
+}
 `;
 const queryBrands = `//groq
   *[_type == "brand"]
@@ -15,6 +18,12 @@ const queryBrands = `//groq
 const queryVendor = `//groq
   *[_type == "vendor"]
 `;
+
+// const lala = `*[_type == "vendor"]{
+//   _id, title,
+//   "products": *[_type == "product" && references(^._id)]{_id, title}
+// }
+// `;
 
 function IndexPage(props) {
   const { productsData, preview, brands, vendors } = props;
@@ -29,8 +38,8 @@ function IndexPage(props) {
     enabled: preview || router.query.preview !== null,
   });
 
-  // console.log(brands);
-  console.log(vendors);
+  console.log(productsData);
+  // console.log(vendors);
 
   return (
     <div className="my-0">
@@ -48,7 +57,7 @@ function IndexPage(props) {
             ))}
           </div> */}
           <div className="grid gap-2 grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1 mt-2 ">
-            <BrandTabs vendors={vendors} />
+            <BrandTabs vendors={vendors} productsData={productsData} />
           </div>
         </div>
       </div>

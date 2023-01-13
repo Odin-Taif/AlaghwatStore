@@ -8,7 +8,7 @@ import category from "./documents/category";
 import product from "./documents/product";
 import vendor from "./documents/vendor";
 import productVariant from "./documents/productVariant";
-import deviceName from "./documents/deviceName";
+import service from "./documents/service";
 import brand from "./documents/brand";
 import social from "./documents/social";
 import ad from "./documents/ad";
@@ -77,6 +77,6 @@ export default createSchema({
     localeBlockContent,
     localeString,
     productVariant,
-    deviceName,
+    service,
   ]),
 });

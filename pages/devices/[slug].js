@@ -8,6 +8,7 @@ import CompanyProducts from "../../components/companyProducts";
 const query = groq`*[_type == "product" && slug.current == $slug][0]`;
 
 function ProductPageContainer({ productData, preview }) {
+  console.log(productData);
   const router = useRouter();
   if (!router.isFallback && !productData?.slug) {
     return <Error statusCode={404} />;
@@ -22,13 +23,14 @@ function ProductPageContainer({ productData, preview }) {
   const {
     _id,
     title,
-    defaultProductVariant,
+    // defaultProductVariant,
     mainImage,
-    blurb,
-    body,
-    tags,
-    vendor,
-    categories,
+    // services,
+    // blurb,
+    // body,
+    // tags,
+    // vendor,
+    // categories,
     slug,
   } = product;
   return (
@@ -36,16 +38,17 @@ function ProductPageContainer({ productData, preview }) {
       <ProductPage
         id={_id}
         title={title}
-        defaultProductVariant={defaultProductVariant}
+        // defaultProductVariant={defaultProductVariant}
         mainImage={mainImage}
-        blurb={blurb}
-        body={body}
-        tags={tags}
-        vendor={vendor}
-        categories={categories}
+        // blurb={blurb}
+        // body={body}
+        // tags={tags}
+        // vendor={vendor}
+        // categories={categories}
+        // services={services}
         slug={slug?.current}
       />
-      <CompanyProducts />
+      {/* <CompanyProducts /> */}
     </>
   );
 }

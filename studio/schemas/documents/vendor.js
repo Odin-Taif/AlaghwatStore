@@ -1,6 +1,6 @@
 export default {
   name: "vendor",
-  title: "Vendor",
+  title: "vendor",
   type: "document",
   fields: [
     {
@@ -24,33 +24,21 @@ export default {
       options: { hotspot: true },
     },
     {
-      title: "Device Type",
       name: "devices",
+      title: "devices",
       type: "array",
       of: [
         {
-          title: "Device",
-          type: "deviceName",
+          type: "reference",
+          to: { type: "product" },
         },
       ],
     },
     {
-      title: "DeviceType",
-      name: "devicess",
-      type: "array",
-      of: [
-        {
-          title: "Device",
-          type: "deviceName",
-        },
-      ],
+      name: "description",
+      title: "Description",
+      type: "blockContent",
     },
-
-    // {
-    //   name: "description",
-    //   title: "Description",
-    //   type: "blockContent",
-    // },
   ],
   preview: {
     select: {

@@ -4,16 +4,17 @@ import BrandCard from "../components/BrandCard";
 import { urlFor } from "../utils/sanity";
 import Link from "next/link";
 function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join("");
 }
 
-export default function BrandTabs({ vendors }) {
-  // console.log(brands);
+export default function BrandTabs({ productsData }) {
+  // console.log(productsData.filter((item) => item.vendor));
+  console.log(productsData);
   return (
     <div className="w-full px-0 py-2">
       <Tab.Group>
         <Tab.List className="flex space-x-1 rounded-xl bg-blue-900/20 p-1">
-          {vendors.map((vendor) => (
+          {productsData.map((vendor) => (
             <Tab
               key={vendor._id}
               className={({ selected }) =>
@@ -32,7 +33,7 @@ export default function BrandTabs({ vendors }) {
         </Tab.List>
 
         <Tab.Panels className="mt-2 mb-80">
-          {vendors.map((vendor) => (
+          {productsData.map((vendor) => (
             <Tab.Panel
               key={vendor._id}
               className={classNames(
@@ -41,20 +42,20 @@ export default function BrandTabs({ vendors }) {
               )}
             >
               <ul>
-                {vendor.devices.map((service) => (
+                {vendor.products.map((product) => (
                   <li
-                    key={service._key}
+                    key={product._id}
                     className="flex justify-between relative rounded-md p-3 my-2 bg-gray-100 hover:bg-blue-100 "
                   >
-                    <h3 className="text-sm font-medium p-3">{service.title}</h3>
+                    <h3 className="text-sm font-medium p-3">{product.title}</h3>
                     <div className="flex justify-start ">
                       <h3 className="text-sm font-medium p-3">
-                        {service.price}-SEK
+                        {product.price}-SEK
                       </h3>
                       <div
                         className=" h-10 w-10 bg-cover rounded-full border-2 border-y-teal-300"
                         style={{
-                          backgroundImage: `url('${urlFor(service.mainImage)
+                          backgroundImage: `url('${urlFor(product.mainImage)
                             .auto("format")
                             .fit("crop")
                             .width(100)
@@ -64,7 +65,7 @@ export default function BrandTabs({ vendors }) {
                     </div>
 
                     <Link
-                      href={`/products`}
+                      href={`/devices/${product.slug.current}`}
                       className={classNames(
                         "absolute inset-0 rounded-md",
                         "ring-blue-400 focus:z-10 focus:outline-none focus:ring-2"

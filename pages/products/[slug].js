@@ -6,7 +6,6 @@ import { getClient, usePreviewSubscription } from "../../utils/sanity";
 import CompanyProducts from "../../components/companyProducts";
 
 const query = groq`*[_type == "product" && slug.current == $slug][0]`;
-
 function ProductPageContainer({ productData, preview }) {
   const router = useRouter();
   if (!router.isFallback && !productData?.slug) {

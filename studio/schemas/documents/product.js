@@ -19,16 +19,27 @@ export default {
         hotspot: true,
       },
     },
+    {
+      title: "services",
+      name: "services",
+      type: "array",
+      of: [
+        {
+          title: "service",
+          type: "service",
+        },
+      ],
+    },
     // {
     //   name: "blurb",
     //   title: "Blurb",
     //   type: "localeString",
     // },
-    {
-      name: "body",
-      title: "Body",
-      type: "localeBlockContent",
-    },
+    // {
+    //   name: "body",
+    //   title: "Body",
+    //   type: "localeBlockContent",
+    // },
     // {
     //   title: "Tags",
     //   name: "tags",
@@ -58,12 +69,12 @@ export default {
     //     },
     //   ],
     // },
-    {
-      name: "vendor",
-      title: "Vendor",
-      type: "reference",
-      to: { type: "vendor" },
-    },
+    // {
+    //   name: "vendor",
+    //   title: "Vendor",
+    //   type: "reference",
+    //   to: { type: "vendor" },
+    // },
     // {
     //   name: "categories",
     //   title: "Categories",
