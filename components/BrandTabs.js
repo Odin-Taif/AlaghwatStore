@@ -8,22 +8,19 @@ function classNames(...classes) {
 }
 
 export default function BrandTabs({ productsData }) {
-  // console.log(productsData.filter((item) => item.vendor));
-  console.log(productsData);
   return (
     <div className="w-full px-0 py-2">
       <Tab.Group>
-        <Tab.List className="flex space-x-1 rounded-xl bg-blue-900/20 p-1">
+        <Tab.List className="flex space-x-1 rounded-xl bg-teal-50 p-1">
           {productsData.map((vendor) => (
             <Tab
               key={vendor._id}
               className={({ selected }) =>
                 classNames(
-                  "w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-blue-700",
-                  "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2",
-                  selected
-                    ? "bg-white shadow"
-                    : "text-blue-100 hover:bg-white/[0.12] hover:text-white"
+                  "w-full rounded-lg py-2.5 text-sm font-medium leading-5",
+                  "ring-opacity-60 ring-offset-1 ring-offset-pink-300 focus:outline-none focus:ring-2",
+
+                  selected ? " shadow" : " hover:bg-pink-100  hover:text-white"
                 )
               }
             >
@@ -32,34 +29,31 @@ export default function BrandTabs({ productsData }) {
           ))}
         </Tab.List>
 
-        <Tab.Panels className="mt-2 mb-80">
+        <Tab.Panels className="mb-80 rounded-xl">
           {productsData.map((vendor) => (
             <Tab.Panel
               key={vendor._id}
               className={classNames(
-                "rounded-xl bg-white p-1",
-                "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2"
+                "bg-white p-1",
+                "ring-white ring-opacity-60"
               )}
             >
-              <ul>
+              <ul className="grid gap-2 grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-2">
                 {vendor.products.map((product) => (
                   <li
                     key={product._id}
-                    className="flex justify-between relative rounded-md p-3 my-2 bg-gray-100 hover:bg-blue-100 "
+                    className="flex justify-between relative rounded-md p-3 m-1 bg-gray-100 hover:bg-pink-100"
                   >
                     <h3 className="text-sm font-medium p-3">{product.title}</h3>
                     <div className="flex justify-start ">
-                      <h3 className="text-sm font-medium p-3">
-                        {product.price}-SEK
-                      </h3>
                       <div
-                        className=" h-10 w-10 bg-cover rounded-full border-2 border-y-teal-300"
+                        className="h-20 w-20 md:w-40 md:h-40 bg-cover rounded-full border-2 border-y-teal-300"
                         style={{
                           backgroundImage: `url('${urlFor(product.mainImage)
                             .auto("format")
                             .fit("crop")
-                            .width(100)
-                            .quality(80)}`,
+                            .width(200)
+                            .quality(100)}`,
                         }}
                       />
                     </div>
@@ -67,7 +61,7 @@ export default function BrandTabs({ productsData }) {
                     <Link
                       href={`/devices/${product.slug.current}`}
                       className={classNames(
-                        "absolute inset-0 rounded-md",
+                        "absolute inset-0 rounded-xl",
                         "ring-blue-400 focus:z-10 focus:outline-none focus:ring-2"
                       )}
                     />

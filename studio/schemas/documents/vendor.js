@@ -23,17 +23,17 @@ export default {
       type: "image",
       options: { hotspot: true },
     },
-    {
-      name: "devices",
-      title: "devices",
-      type: "array",
-      of: [
-        {
-          type: "reference",
-          to: { type: "product" },
-        },
-      ],
-    },
+    // {
+    //   name: "devices",
+    //   title: "devices",
+    //   type: "array",
+    //   of: [
+    //     {
+    //       type: "reference",
+    //       to: { type: "product" },
+    //     },
+    //   ],
+    // },
     {
       name: "description",
       title: "Description",

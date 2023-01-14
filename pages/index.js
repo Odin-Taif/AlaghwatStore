@@ -19,12 +19,6 @@ const queryVendor = `//groq
   *[_type == "vendor"]
 `;
 
-// const lala = `*[_type == "vendor"]{
-//   _id, title,
-//   "products": *[_type == "product" && references(^._id)]{_id, title}
-// }
-// `;
-
 function IndexPage(props) {
   const { productsData, preview, brands, vendors } = props;
 
@@ -37,9 +31,6 @@ function IndexPage(props) {
     initialData: productsData,
     enabled: preview || router.query.preview !== null,
   });
-
-  console.log(productsData);
-  // console.log(vendors);
 
   return (
     <div className="my-0">

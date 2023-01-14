@@ -25,11 +25,11 @@ function ProductPageContainer({ productData, preview }) {
     title,
     // defaultProductVariant,
     mainImage,
-    // services,
+    services,
     // blurb,
     // body,
     // tags,
-    // vendor,
+    vendor,
     // categories,
     slug,
   } = product;
@@ -45,7 +45,7 @@ function ProductPageContainer({ productData, preview }) {
         // tags={tags}
         // vendor={vendor}
         // categories={categories}
-        // services={services}
+        services={services}
         slug={slug?.current}
       />
       {/* <CompanyProducts /> */}

@@ -4,7 +4,7 @@ import { urlFor } from "../utils/sanity";
 function BrandCard({ _id, title, logo }) {
   // console.log(logo);
   return (
-    <div className="flex flex-col mx-auto  my-auto items-center justify-center">
+    <div className="flex flex-col mx-auto my-auto items-center justify-center">
       {/* <Link
         href={`/products`}
         className="flex mx-auto items-center justify-center h-auto w-auto"

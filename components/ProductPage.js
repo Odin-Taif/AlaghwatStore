@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { urlFor, PortableText, getClient } from "../utils/sanity";
-
+import ServicesList from "../components/ServicesList";
 function ProductPage(props) {
   const [count, setCount] = useState(1);
   const handleCount = (value) =>
@@ -23,9 +23,6 @@ function ProductPage(props) {
         </div>
         <div className="w-full max-w-lg mx-auto mt-5 md:ml-8 md:mt-0 md:w-1/2">
           <h3 className="text-gray-700 uppercase text-lg">{title}</h3>
-          <span className="text-gray-500 mt-3">
-            ${defaultProductVariant?.price}
-          </span>
           <hr className="my-3" />
           {/* <div className="mt-2">
             <label className="text-gray-700 text-sm" htmlFor="count">
@@ -71,6 +68,7 @@ function ProductPage(props) {
             {/* {services.map((service) => (
               <h1>{service.title}</h1>
             ))} */}
+            <ServicesList services={services} />
             {/* <button className="px-8 py-2 bg-indigo-600 text-white text-sm font-medium rounded hover:bg-indigo-500 focus:outline-none focus:bg-indigo-500">
               Order Now
             </button>
