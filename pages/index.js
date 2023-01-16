@@ -38,7 +38,7 @@ function IndexPage(props) {
         <HeaderSection />
         <div className="container mx-auto px-6">
           <h1 className=" text-sky-800 text-4xl font-semibold mx-auto my-3 px-1">
-            Välj vad vill du laga?2
+            Välj vad vill du laga?
           </h1>
           <div className="grid gap-2 grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1 mt-2 ">
             <BrandTabs vendors={vendors} productsData={productsData} />

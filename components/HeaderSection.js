@@ -2,14 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import vastTech from "../public/Assests/webP/vastTech.webp";
 import techbanner from "../public/Assests/webP/techbanner.webp";
-import { FaQrcode } from "react-icons/fa";
-import {
-  FaTwitter,
-  FaInstagram,
-  FaFacebookF,
-  FaMailBulk,
-  FaMobileAlt,
-} from "react-icons/fa";
+import { FaMobileAlt } from "react-icons/fa";
 function HeaderSection() {
   return (
     <section className="bg-black dark:bg-gray-900 border-l-2 border-t-2 border-purple-700 ">
@@ -50,7 +43,7 @@ function HeaderSection() {
             draggable="false"
             alt="vastras tech company"
             priority="true"
-            className="border-l-2 border-b-2 border-purple-700"
+            className="border-r-2 border-b-2 border-purple-700"
           />
         </div>
       </div>
