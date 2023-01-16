@@ -2,7 +2,6 @@ import { useState } from "react";
 import { RadioGroup } from "@headlessui/react";
 
 export default function ServicesList({ services }) {
-  console.log(services);
   //   const [selected, setSelected] = useState(services[0]);
 
   return (

@@ -40,13 +40,6 @@ function IndexPage(props) {
           <h1 className=" text-sky-800 text-4xl font-semibold mx-auto my-3 px-1">
             Välj vad vill du laga?
           </h1>
-          {/* <h3 className="text-gray-700 text-2xl font-medium">Juices</h3> */}
-          {/* <span className="mt-3 text-sm text-gray-500">The Juicy bits.</span> */}
-          {/* <div className="grid gap-2 grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6 ">
-            {products.map((product) => (
-              <ProductCard key={product._id} {...product} />
-            ))}
-          </div> */}
           <div className="grid gap-2 grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1 mt-2 ">
             <BrandTabs vendors={vendors} productsData={productsData} />
           </div>

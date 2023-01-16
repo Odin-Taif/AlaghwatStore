@@ -8,8 +8,8 @@ import { useRouter } from "next/router";
 const navigation = [
   { name: "Hem", href: "/", current: false },
   // { name: "Produkter", href: "/products", current: false },
-  { name: "Om Oss", href: "/about", current: false },
   { name: "Kontakt", href: "/contact", current: false },
+  { name: "Om Oss", href: "/about", current: false },
 ];
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
