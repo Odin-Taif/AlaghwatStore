@@ -1,6 +1,9 @@
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { FiMapPin } from "react-icons/fi";
+import { MdContactPhone } from "react-icons/md";
+
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../public/Assests/webP/logo.webp";
@@ -77,6 +80,23 @@ export default function Navbar() {
                   </div>
                 </div>
               </div>
+              <Link href={"/businesscard"}>
+                <MdContactPhone
+                  size={25}
+                  className="text-white m-4 hover:text-blue-500"
+                />
+              </Link>
+              <Link
+                href={
+                  "https://www.google.com/maps/dir//V%C3%A4ster%C3%A5s+Tech+AB/data=!4m8!4m7!1m0!1m5!1m1!1s0x465e6177c01d8a57:0x8117349cbcdf9ca6!2m2!1d16.5420248!2d59.6102065"
+                }
+                target="_blank"
+              >
+                <FiMapPin
+                  size={25}
+                  className="text-white m-2 hover:text-red-500"
+                />
+              </Link>
             </div>
           </div>
 
