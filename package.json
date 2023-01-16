@@ -26,6 +26,7 @@
     "@sanity/vision": "^3.2.3",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "font-awesome": "^4.7.0",
+    "framer-motion": "^8.4.3",
     "heroicons-react": "^1.4.1",
     "next": "^13.1.1",
     "next-sanity": "^0.1.8",

@@ -6,21 +6,25 @@ export default {
   icon: MdPeople,
   fields: [
     {
-      name: "channel",
+      title: "Title",
+      name: "title",
       type: "string",
-      options: {
-        list: ["twitter", "instagram", "linkedin"],
-      },
     },
     {
-      name: "text",
-      type: "text",
+      title: "Link url",
+      name: "href",
+      type: "url",
+      validation: (Rule) =>
+        Rule.uri({
+          scheme: ["http", "https", "mailto", "tel"],
+        }),
     },
-    {
-      name: "attachment",
-      type: "image",
-      title: "Attachment",
-      options: { hotspot: true },
-    },
+
+    // {
+    //   name: "attachment",
+    //   type: "image",
+    //   title: "Attachment",
+    //   options: { hotspot: true },
+    // },
   ],
 };
