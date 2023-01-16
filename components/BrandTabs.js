@@ -42,7 +42,7 @@ export default function BrandTabs({ productsData }) {
                 {vendor.products.map((product) => (
                   <li
                     key={product._id}
-                    className="flex justify-between relative rounded-md p-3 m-1 bg-gray-100 hover:bg-pink-100"
+                    className="flex justify-between flex-col relative rounded-md p-3 m-1 bg-gray-100 hover:bg-pink-100"
                   >
                     <h3 className="text-sm font-medium p-3">{product.title}</h3>
                     <div className="flex justify-start ">
