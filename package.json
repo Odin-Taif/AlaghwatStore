@@ -15,6 +15,7 @@
     "url": "git+https://github.com/sanity-io/sanity-template-nextjs-ecommerce.git"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@fortawesome/fontawesome": "^1.1.8",
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
@@ -25,6 +26,8 @@
     "@sanity/image-url": "^0.140.19",
     "@sanity/vision": "^3.2.3",
     "@tailwindcss/aspect-ratio": "^0.4.2",
+    "emailjs": "^4.0.1",
+    "emailjs-com": "^3.2.0",
     "font-awesome": "^4.7.0",
     "framer-motion": "^8.4.3",
     "heroicons-react": "^1.4.1",

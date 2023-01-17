@@ -12,7 +12,30 @@
   }
   ```
 */
+import { useRef } from "react";
+import emailjs from "emailjs-com";
 export default function Contact() {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_5u6pcy9",
+        "template_q5iskbq",
+
+        form.current,
+        "dWlURBGetKYlEjW64"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  };
   return (
     <>
       <div className="flex content-center justify-center bg-slate-900 m-auto mt-10 sm:mt-0">
