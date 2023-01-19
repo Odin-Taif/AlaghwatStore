@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import vastTech from "../public/Assests/webP/vastTech.webp";
-import techbanner from "../public/Assests/webP/techbanner.webp";
+import vastech from "../public/Assests/webP/vastech.webp";
+
 import { FaMobileAlt } from "react-icons/fa";
 function HeaderSection() {
   return (
@@ -15,7 +15,7 @@ function HeaderSection() {
             Där allting lagas på nytt.
           </h1> */}
           <Image
-            src={techbanner}
+            src={vastech}
             cover="true"
             draggable="false"
             alt="vastras tech company"
@@ -36,7 +36,7 @@ function HeaderSection() {
             Kontakta Oss
           </Link>
         </div>
-        <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
+        {/* <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
           <Image
             src={vastTech}
             cover="true"
@@ -45,7 +45,7 @@ function HeaderSection() {
             priority="true"
             className="border-r-2 border-b-2 border-purple-700"
           />
-        </div>
+        </div> */}
       </div>
     </section>
   );
