@@ -36,16 +36,6 @@ function HeaderSection() {
             Kontakta Oss
           </Link>
         </div>
-        {/* <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-          <Image
-            src={vastTech}
-            cover="true"
-            draggable="false"
-            alt="vastras tech company"
-            priority="true"
-            className="border-r-2 border-b-2 border-purple-700"
-          />
-        </div> */}
       </div>
     </section>
   );
