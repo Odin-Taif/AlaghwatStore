@@ -16,19 +16,6 @@ function HeaderSection() {
             priority="true"
             className="border-t-2 border-b-2 border-purple-700"
           />
-          <Link
-            href="tel:+46769136931"
-            className="inline-flex m-4 hover:bg-cyan-300 justify-center items-center py-3 px-5 text-base font-medium text-center rounded border border-gray-300 focus:ring-4 text-white "
-          >
-            <FaMobileAlt />
-            Ring Oss
-          </Link>
-          {/* <Link
-            href="/contact"
-            className="inline-flex m-4 hover:bg-cyan-300 justify-center items-center py-3 px-5 text-base font-medium text-center rounded border border-gray-300 focus:ring-4 text-white "
-          >
-            Kontakta Oss
-          </Link> */}
         </div>
       </div>
     </section>
