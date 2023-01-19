@@ -60,10 +60,10 @@ export default {
     // },
 
     {
-      name: "vendor",
-      title: "Vendor",
+      name: "brand",
+      title: "Brand",
       type: "reference",
-      to: { type: "vendor" },
+      to: { type: "brand" },
     },
     {
       name: "slug",

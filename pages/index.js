@@ -8,10 +8,17 @@ import BrandTabs from "../components/BrandTabs";
 
 const query = `*[_type == "vendor"]{
   _id, title,
-  "products": *[_type == "product" && references(^._id)]{title, ...},
+  "brands": *[_type == "brand" && references(^._id)]{title, ...},
   ...
 }
 `;
+
+// const queryBrand = `*[_type == "vendor"]{
+//   _id, title,
+//   "products": *[_type == "product" && references(^._id)]{title, ...},
+//   ...
+// }
+// `;
 const queryBrands = `//groq
   *[_type == "brand"]
 `;
@@ -21,7 +28,7 @@ const queryVendor = `//groq
 
 function IndexPage(props) {
   const { productsData, preview, brands, vendors } = props;
-
+  // console.log(productsData);
   const router = useRouter();
 
   if (!router.isFallback && !productsData) {

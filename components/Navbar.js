@@ -3,7 +3,7 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { FiMapPin } from "react-icons/fi";
 import { MdContactPhone } from "react-icons/md";
-
+import { FaMobileAlt } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../public/Assests/webP/logo.webp";
@@ -90,6 +90,12 @@ export default function Navbar() {
                   className="text-white m-2 hover:text-red-500"
                 />
               </a>
+              <Link
+                href="tel:+46769136931"
+                className="inline-flex m-4 hover:text-cyan-300 justify-center items-center py-3 px-5 text-base font-medium text-center focus:ring-4 text-white "
+              >
+                <FaMobileAlt size={25} />
+              </Link>
             </div>
           </div>
 

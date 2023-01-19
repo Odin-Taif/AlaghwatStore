@@ -5,9 +5,16 @@ import ProductPage from "../../components/ProductPage";
 import { getClient, usePreviewSubscription } from "../../utils/sanity";
 import CompanyProducts from "../../components/companyProducts";
 
-const query = groq`*[_type == "product" && slug.current == $slug][0]`;
+// const query = groq`*[_type == "brand" && slug.current == $slug][0]`;
 
+const query = `*[_type == "brand" && slug.current == $slug][0]{
+  _id, title,
+  "products": *[_type == "product" && references(^._id)]{title, ...},
+  ...
+}
+`;
 function ProductPageContainer({ productData, preview }) {
+  console.log(productData);
   const router = useRouter();
   if (!router.isFallback && !productData?.slug) {
     return <Error statusCode={404} />;
@@ -22,6 +29,7 @@ function ProductPageContainer({ productData, preview }) {
   const {
     _id,
     title,
+    products,
     // defaultProductVariant,
     mainImage,
     services,
@@ -33,9 +41,24 @@ function ProductPageContainer({ productData, preview }) {
   } = product;
   return (
     <>
-      <ProductPage
+      {/* <ProductPage
         id={_id}
         title={title}
+        products={products}
+        // defaultProductVariant={defaultProductVariant}
+        mainImage={mainImage}
+        // blurb={blurb}
+        body={body}
+        // tags={tags}
+        // vendor={vendor}
+        // categories={categories}
+        services={services}
+        slug={slug?.current}
+      /> */}
+      <CompanyProducts
+        id={_id}
+        title={title}
+        products={products}
         // defaultProductVariant={defaultProductVariant}
         mainImage={mainImage}
         // blurb={blurb}
@@ -46,7 +69,6 @@ function ProductPageContainer({ productData, preview }) {
         services={services}
         slug={slug?.current}
       />
-      {/* <CompanyProducts /> */}
     </>
   );
 }

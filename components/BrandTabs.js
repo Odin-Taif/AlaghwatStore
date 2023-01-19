@@ -39,17 +39,17 @@ export default function BrandTabs({ productsData }) {
               )}
             >
               <ul className="grid gap-2 grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-2">
-                {vendor.products.map((product) => (
+                {vendor.brands.map((brand) => (
                   <li
-                    key={product._id}
+                    key={brand._id}
                     className="flex justify-between flex-col relative rounded-md p-3 m-1 bg-gray-100 hover:bg-pink-100"
                   >
-                    <h3 className="text-sm font-medium p-3">{product.title}</h3>
+                    <h3 className="text-sm font-medium p-3">{brand.title}</h3>
                     <div className="flex justify-start ">
                       <div
                         className="h-20 w-20 md:w-40 md:h-40 bg-cover rounded-full border-2 border-y-teal-300"
                         style={{
-                          backgroundImage: `url('${urlFor(product.mainImage)
+                          backgroundImage: `url('${urlFor(brand.mainImage)
                             .auto("format")
                             .fit("crop")
                             .width(200)
@@ -59,7 +59,7 @@ export default function BrandTabs({ productsData }) {
                     </div>
 
                     <Link
-                      href={`/devices/${product.slug.current}`}
+                      href={`/devices/${brand.slug.current}`}
                       className={classNames(
                         "absolute inset-0 rounded-xl",
                         "ring-blue-400 focus:z-10 focus:outline-none focus:ring-2"
