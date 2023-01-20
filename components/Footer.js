@@ -28,11 +28,13 @@ export default function Footer() {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap text-center lg:text-left">
             <div className="w-full lg:w-6/12 px-4">
-              <h4 className="text-3xl font-semibold">
-                Låt oss hålla kontakten!
+              <h4 className="text-3xl font-semibold text-green-600">
+                Öppettider:
               </h4>
               <h5 className="text-lg mt-0 mb-2 text-blueGray-600">
-                Hitta oss på någon av dessa plattformar.
+                Måndag-Fredag 11:00-15:00 <br /> Lördag 11:00-15:00
+                <br />
+                <span className="text-red-500"> Söndag Stängt</span>
               </h5>
               <div className=" flex flex-row mt-6 lg:mb-0 mb-6">
                 <a

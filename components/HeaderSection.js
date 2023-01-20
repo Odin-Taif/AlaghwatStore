@@ -8,7 +8,7 @@ function HeaderSection() {
     <section className="bg-black dark:bg-gray-900 border-l-2 border-t-2 border-purple-700 ">
       <div className="grid py-4 px-4 mx-auto max-w-screen-xl lg:gap-0 xl:gap-0 lg:py-2 lg:grid-cols-12">
         <div className="place-self-center mr-auto lg:col-span-7">
-          <Imagex
+          <Image
             src={vastech}
             cover="true"
             draggable="false"

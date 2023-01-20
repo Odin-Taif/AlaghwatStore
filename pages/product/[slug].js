@@ -3,18 +3,9 @@ import { groq } from "next-sanity";
 import { useRouter } from "next/router";
 import ProductPage from "../../components/ProductPage";
 import { getClient, usePreviewSubscription } from "../../utils/sanity";
-import CompanyProducts from "../../components/companyProducts";
+const query = groq`*[_type == "product" && slug.current == $slug][0]`;
 
-// const query = groq`*[_type == "brand" && slug.current == $slug][0]`;
-
-const query = `*[_type == "brand" && slug.current == $slug][0]{
-  _id, title,
-  "products": *[_type == "product" && references(^._id)]{title, ...},
-  ...
-}
-`;
 function ProductPageContainer({ productData, preview }) {
-  // console.log(productData);
   const router = useRouter();
   if (!router.isFallback && !productData?.slug) {
     return <Error statusCode={404} />;
@@ -26,22 +17,10 @@ function ProductPageContainer({ productData, preview }) {
     enabled: preview || router.query.preview !== null,
   });
 
-  const {
-    _id,
-    title,
-    products,
-    // defaultProductVariant,
-    mainImage,
-    services,
-    // blurb,
-    body,
-    // tags,
-    vendor,
-    slug,
-  } = product;
+  const { _id, title, products, mainImage, services, body, slug } = product;
   return (
     <>
-      <CompanyProducts
+      <ProductPage
         id={_id}
         title={title}
         products={products}
