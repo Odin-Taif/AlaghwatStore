@@ -44,10 +44,10 @@ export default function BrandTabs({ productsData }) {
                     key={brand._id}
                     className="flex justify-between flex-col relative rounded-md p-3 m-1 bg-gray-100 hover:bg-pink-100"
                   >
-                    <h3 className="text-sm font-medium p-3">{brand.title}</h3>
-                    <div className="flex justify-start ">
+                    <h3 className="text-md font-medium p-3">{brand.title}</h3>
+                    <div className="flex justify-center ">
                       <div
-                        className="h-20 w-20 md:w-40 md:h-40 bg-cover rounded-full border-2 border-y-teal-300"
+                        className="h-20 w-20 md:w-40 md:h-40 bg-cover"
                         style={{
                           backgroundImage: `url('${urlFor(brand.mainImage)
                             .auto("format")
