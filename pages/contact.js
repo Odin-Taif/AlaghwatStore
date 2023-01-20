@@ -14,6 +14,7 @@
 */
 import { useRef } from "react";
 import emailjs from "emailjs-com";
+import { FiMapPin } from "react-icons/fi";
 export default function Contact() {
   const form = useRef();
   const sendEmail = (e) => {
@@ -52,6 +53,7 @@ export default function Contact() {
             <div className="px-4 mx-4 my-4">
               <h3 className="text-lg font-medium leading-6 text-white p-4">
                 Berätta gärna vad vill du ha hjälp med så når dig inom kort.
+                <hr className="my-3" />
               </h3>
             </div>
             <form action="#" method="POST">
@@ -128,7 +130,19 @@ export default function Contact() {
         </div>
         <div className="bg-gray-700  p-20 border-b-2 border-purple-700">
           <div>
-            <h4 className="text-3xl font-semibold text-white">Adress</h4>
+            <h4 className="text-3xl font-semibold text-white">
+              <a
+                href="https://www.google.com/maps/dir//V%C3%A4ster%C3%A5s+Tech+AB/data=!4m8!4m7!1m0!1m5!1m1!1s0x465e6177c01d8a57:0x8117349cbcdf9ca6!2m2!1d16.5420248!2d59.6102065"
+                target="_blank"
+              >
+                <FiMapPin
+                  size={25}
+                  className="text-white m-2 hover:text-red-500"
+                />
+              </a>
+              Adress
+              <hr className="my-3" />
+            </h4>
             <h5 className="text-lg mt-0 mb-2 text-blueGray-600  text-gray-300">
               Kungsgatan 2
               <br /> 722 11 Västerås
@@ -137,7 +151,9 @@ export default function Contact() {
             </h5>
           </div>
           <div>
-            <h4 className="text-3xl font-semibold text-white">Öppettider</h4>
+            <h4 className="text-3xl font-semibold text-white">
+              Öppettider <hr className="my-3" />
+            </h4>
             <h5 className="text-lg mt-0 mb-2 text-gray-300">
               Måndag-Fredag 11:00-15:00 <br /> Lördag 11:00-15:00
               <br />

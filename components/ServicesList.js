@@ -26,7 +26,7 @@ export default function ServicesList({ services }) {
                       ? "bg-white-900 bg-opacity-75 text-black"
                       : "bg-white"
                   }
-                    relative flex cursor-pointer rounded-lg px-5 py-4 shadow-md focus:outline-none`
+                    relative flex rounded-lg px-5 py-4 shadow-md focus:outline-none`
                   }
                 >
                   {
@@ -48,7 +48,7 @@ export default function ServicesList({ services }) {
                         </div>
                         {
                           <div className="shrink-0 text-black">
-                            <span>{service.price}</span>
+                            <span>{service.price} SEK</span>
                             {/* <CheckIcon className="h-6 w-6" /> */}
                           </div>
                         }
