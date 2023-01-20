@@ -5,10 +5,6 @@ function BrandCard({ _id, title, logo }) {
   // console.log(logo);
   return (
     <div className="flex flex-col mx-auto my-auto items-center justify-center">
-      {/* <Link
-        href={`/products`}
-        className="flex mx-auto items-center justify-center h-auto w-auto"
-      > */}
       <div
         className="flex mx-auto items-center justify-center h-20 w-20 bg-cover rounded-full border-2 border-y-teal-300  cursor-pointer"
         style={{
@@ -36,9 +32,6 @@ function BrandCard({ _id, title, logo }) {
       {/* </Link> */}
       <div className="px-5 py-3">
         <h3 className="text-center text-gray-700 uppercase">{title}</h3>
-        {/* <span className="text-center text-gray-500 mt-2">
-          ${defaultProductVariant?.price}
-        </span> */}
       </div>
     </div>
   );

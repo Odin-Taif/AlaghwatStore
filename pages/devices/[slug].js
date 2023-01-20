@@ -26,19 +26,7 @@ function ProductPageContainer({ productData, preview }) {
     enabled: preview || router.query.preview !== null,
   });
 
-  const {
-    _id,
-    title,
-    products,
-    // defaultProductVariant,
-    mainImage,
-    services,
-    // blurb,
-    body,
-    // tags,
-    vendor,
-    slug,
-  } = product;
+  const { _id, title, products, mainImage, body, slug } = product;
   return (
     <>
       <CompanyProducts
@@ -66,7 +54,7 @@ export async function getStaticProps({ params, preview = false }) {
 
 export async function getStaticPaths() {
   const paths = await getClient().fetch(
-    `*[_type == "product" && defined(slug.current)][].slug.current`
+    `*[_type == "brand" && defined(slug.current)][].slug.current`
   );
 
   return {
