@@ -38,9 +38,17 @@ export default function Contact() {
   };
   return (
     <>
-      <div className="md:grid grid-cols-2 content-center justify-center bg-black m-auto p-2 sm:p-20">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2018.3827613439657!2d16.5415329!3d59.6099896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465e613f6eaf55a1%3A0xa02ab31c773de0b1!2sKungsgatan%202%2C%20722%2011%20V%C3%A4ster%C3%A5s!5e0!3m2!1sen!2sse!4v1674222383088!5m2!1sen!2sse"
+        className="w-full"
+        height="450"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <div className="md:grid grid-cols-2 content-center justify-center bg-black m-auto p-2 sm:p-20 	">
         <div className="md:grid md:grid-cols-2 md:gap-6">
-          <div className="mt-5 md:col-span-2 md:mt-0 bg-gray-700">
+          <div className="mt-5 md:col-span-2 md:mt-0 bg-gray-700 border-t-2 border-purple-700 ">
             <div className="px-4 mx-4 my-4">
               <h3 className="text-lg font-medium leading-6 text-white p-4">
                 Berätta gärna vad vill du ha hjälp med så når dig inom kort.
@@ -106,7 +114,7 @@ export default function Contact() {
                     </div>
                   </div>
                 </div>
-                <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
+                <div className="bg-gray-700  px-4 py-3 text-right sm:px-6">
                   <button
                     type="submit"
                     className="inline-flex justify-center rounded-md border border-transparent bg-cyan-600 py-2 px-10 text-sm font-medium text-black shadow-sm hover:bg-cyan-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
@@ -118,7 +126,7 @@ export default function Contact() {
             </form>
           </div>
         </div>
-        <div className="bg-gray-700  p-20">
+        <div className="bg-gray-700  p-20 border-b-2 border-purple-700">
           <div>
             <h4 className="text-3xl font-semibold text-white">Adress</h4>
             <h5 className="text-lg mt-0 mb-2 text-blueGray-600  text-gray-300">

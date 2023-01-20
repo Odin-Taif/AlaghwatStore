@@ -11,7 +11,7 @@ export default function CompanyProducts(props) {
             <Link
               key={product._id}
               href={`/product/${product.slug.current}`}
-              className="group hover:bg-slate-100  "
+              className="group hover:bg-slate-100 "
             >
               <div className="flex flex-col mx-auto my-auto items-center justify-center ">
                 <div
