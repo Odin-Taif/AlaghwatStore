@@ -35,7 +35,6 @@ function ProductPageContainer({ productData, preview }) {
         products={products}
         mainImage={mainImage}
         body={body}
-        services={services}
         slug={slug?.current}
       />
     </>
