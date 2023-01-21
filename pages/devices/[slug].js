@@ -3,7 +3,7 @@ import { groq } from "next-sanity";
 import { useRouter } from "next/router";
 import ProductPage from "../../components/ProductPage";
 import { getClient, usePreviewSubscription } from "../../utils/sanity";
-import CompanyProducts from "../../components/companyProducts";
+// import CompanyProducts from "../../components/companyProducts";
 
 // const query = groq`*[_type == "brand" && slug.current == $slug][0]`;
 
