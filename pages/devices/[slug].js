@@ -29,14 +29,15 @@ function ProductPageContainer({ productData, preview }) {
   const { _id, title, products, mainImage, body, slug } = product;
   return (
     <>
-      <CompanyProducts
+      <h1>fjasdkfja</h1>
+      {/* <CompanyProducts
         id={_id}
         title={title}
         products={products}
         mainImage={mainImage}
         body={body}
         slug={slug?.current}
-      />
+      /> */}
     </>
   );
 }
