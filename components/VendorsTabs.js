@@ -1,35 +1,54 @@
 import { useState } from "react";
 import { Tab } from "@headlessui/react";
-import BrandCard from "../components/BrandCard";
+import BrandCard from "./BrandCard";
 import { urlFor } from "../utils/sanity";
 import Link from "next/link";
 function classNames(...classes) {
   return classes.filter(Boolean).join("");
 }
 
-export default function BrandTabs({ productsData }) {
+export default function VendorsTabs({ productsData }) {
+  console.log(productsData);
   return (
-    <div className="w-full px-0 py-2">
+    <div className="w-full px-0 py-2 ">
+      {productsData.map((vendor) => (
+        // <Tab
+        //   key={vendor._id}
+        //   className={({ selected }) =>
+        //     classNames(
+        //       "w-full rounded-lg py-2.5 text-sm font-medium leading-5",
+        //       "ring-opacity-60 ring-offset-1 ring-offset-pink-300 focus:outline-none focus:ring-2",
+
+        //       selected ? " shadow" : " hover:bg-pink-100  hover:text-white"
+        //     )
+        //   }
+        // >
+        <Link href={`/vendor/${vendor.slug.current}`}>
+          <BrandCard key={vendor._id} {...vendor} />
+        </Link>
+
+        // </Tab>
+      ))}
       <Tab.Group>
-        <Tab.List className="flex space-x-1 rounded-xl bg-teal-50 p-1">
+        {/* <Tab.List className="flex space-x-1 rounded-xl bg-teal-50 p-1">
           {productsData.map((vendor) => (
-            <Tab
-              key={vendor._id}
-              className={({ selected }) =>
-                classNames(
-                  "w-full rounded-lg py-2.5 text-sm font-medium leading-5",
-                  "ring-opacity-60 ring-offset-1 ring-offset-pink-300 focus:outline-none focus:ring-2",
+            // <Tab
+            //   key={vendor._id}
+            //   className={({ selected }) =>
+            //     classNames(
+            //       "w-full rounded-lg py-2.5 text-sm font-medium leading-5",
+            //       "ring-opacity-60 ring-offset-1 ring-offset-pink-300 focus:outline-none focus:ring-2",
 
-                  selected ? " shadow" : " hover:bg-pink-100  hover:text-white"
-                )
-              }
-            >
-              <BrandCard key={vendor._id} {...vendor} />
-            </Tab>
+            //       selected ? " shadow" : " hover:bg-pink-100  hover:text-white"
+            //     )
+            //   }
+            // >
+            <BrandCard key={vendor._id} {...vendor} />
+            // </Tab>
           ))}
-        </Tab.List>
+        </Tab.List> */}
 
-        <Tab.Panels className="mb-80 rounded-xl">
+        {/* <Tab.Panels className="mb-80 rounded-xl">
           {productsData.map((vendor) => (
             <Tab.Panel
               key={vendor._id}
@@ -70,7 +89,7 @@ export default function BrandTabs({ productsData }) {
               </ul>
             </Tab.Panel>
           ))}
-        </Tab.Panels>
+        </Tab.Panels> */}
       </Tab.Group>
     </div>
   );

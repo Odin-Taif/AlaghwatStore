@@ -3,12 +3,20 @@ import { groq } from "next-sanity";
 import { useRouter } from "next/router";
 import ProductPage from "../../components/ProductPage";
 import { getClient, usePreviewSubscription } from "../../utils/sanity";
-import Device from "../../components/Device";
+import Devicetype from "../../components/Devicetype";
 
-const query = `*[_type == "brand" && slug.current == $slug][0]{
+// const query = groq`*[_type == "brand" && slug.current == $slug][0]`;
+
+// const query2 = `*[_type == "brand" && slug.current == $slug][0]{
+//   _id, title,
+//   "products": *[_type == "product" && references(^._id)]{title, ...},
+//   ...
+// }
+// `;
+
+const query = `*[_type == "vendor" && slug.current == $slug][0]{
   _id, title,
-  "products": *[_type == "product" && references(^._id)]{title, ...},
-  ...
+  "brands": *[_type == "brand" && references(^._id)]{title, ...},slug
 }
 `;
 function ProductPageContainer({ productData, preview }) {
@@ -24,19 +32,10 @@ function ProductPageContainer({ productData, preview }) {
     enabled: preview || router.query.preview !== null,
   });
 
-  const { _id, title, products, mainImage, services, body, slug } = product;
+  const { _id, title, brands, slug } = product;
   return (
     <>
-      <h1>FSDAF</h1>
-      <Device
-        id={_id}
-        title={title}
-        products={products}
-        mainImage={mainImage}
-        body={body}
-        services={services}
-        slug={slug?.current}
-      />
+      <Devicetype id={_id} title={title} brands={brands} slug={slug?.current} />
     </>
   );
 }
@@ -53,7 +52,7 @@ export async function getStaticProps({ params, preview = false }) {
 
 export async function getStaticPaths() {
   const paths = await getClient().fetch(
-    `*[_type == "product" && defined(slug.current)][].slug.current`
+    `*[_type == "vendor" && defined(slug.current)][].slug.current`
   );
 
   return {

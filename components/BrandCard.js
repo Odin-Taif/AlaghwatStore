@@ -4,14 +4,14 @@ import { urlFor } from "../utils/sanity";
 function BrandCard({ _id, title, logo }) {
   // console.log(logo);
   return (
-    <div className="flex flex-col mx-auto my-auto items-center justify-center">
+    <div className="flex flex-col mx-auto my-2 py-2 items-center justify-cente backdrop-blur-sm bg-white/30">
       <div
-        className="flex mx-auto items-center justify-center h-20 w-20 bg-cover rounded-full border-2 border-y-teal-300  cursor-pointer"
+        className="flex mx-auto items-center justify-center h-60 w-60 bg-cover rounded-full border-2 border-y-teal-300 cursor-pointer"
         style={{
           backgroundImage: `url('${urlFor(logo)
             .auto("format")
             .fit("crop")
-            .width(100)
+            .width(200)
             .quality(80)}`,
         }}
       >

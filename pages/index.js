@@ -4,7 +4,7 @@ import { getClient, usePreviewSubscription } from "../utils/sanity";
 import { fetchBrands } from "../utils/fetchBrands";
 import HeaderSection from "../components/HeaderSection";
 import ProductCard from "../components/ProductCard";
-import BrandTabs from "../components/BrandTabs";
+import VendorsTabs from "../components/VendorsTabs";
 
 const query = `*[_type == "vendor"]{
   _id, title,
@@ -44,11 +44,11 @@ function IndexPage(props) {
       <div className="mt-1">
         <HeaderSection />
         <div className="container mx-auto px-6">
-          <h1 className=" text-sky-800 text-4xl font-semibold mx-auto my-3 px-1">
+          <h1 className="text-sky-800 text-4xl font-semibold mx-auto my-3 px-1">
             Välj vad vill du laga?
           </h1>
-          <div className="grid gap-2 grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1 mt-2 ">
-            <BrandTabs vendors={vendors} productsData={productsData} />
+          <div className="grid gap-2 grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1 mt-2">
+            <VendorsTabs vendors={vendors} productsData={productsData} />
           </div>
         </div>
       </div>

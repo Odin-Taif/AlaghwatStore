@@ -1,34 +1,34 @@
 import { urlFor, PortableText, getClient } from "../utils/sanity";
 import Link from "next/link";
-export default function CompanyProducts(props) {
-  const { title, products, mainImage, body } = props;
-  // console.log(products);
+export default function Device(props) {
+  const { title, products } = props;
+  // console.log(brands);
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
         <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
           {products &&
-            products.map((product) => (
+            products.map((brand) => (
               <Link
-                key={product._id}
-                href={`/product/${product.slug.current}`}
+                key={brand._id}
+                href={`/product/${brand.slug.current}`}
                 className="group hover:bg-slate-100 "
               >
                 <div className="flex flex-col mx-auto my-auto items-center justify-center ">
                   <div
                     style={{
-                      backgroundImage: `url('${urlFor(mainImage)
+                      backgroundImage: `url('${urlFor(brand.mainImage)
                         .auto("format")
                         .fit("crop")
                         .quality(100)}`,
                     }}
-                    alt={mainImage?.alt || `Photo of ${title}`}
+                    alt={`Photo of ${brand.title}`}
                     className="mx-auto items-center justify-center h-80 w-60 bg-cover rounded border-2 cursor-pointer"
                   />
                   <p className="mt-1 text-lg font-medium text-gray-900">
-                    <h2 className="mt-2 text-md text-gray-700">
-                      {product.title}
-                    </h2>
+                    <span className="mt-2 text-md text-gray-700">
+                      {brand.title}
+                    </span>
                   </p>
                 </div>
               </Link>
