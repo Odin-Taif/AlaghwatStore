@@ -11,6 +11,11 @@ export default {
       title: "Site title",
     },
     {
+      name: "email",
+      type: "email",
+      title: "Site email",
+    },
+    {
       title: "URL",
       name: "url",
       type: "url",
