@@ -338,7 +338,7 @@ export default function Contact() {
                 />
               </a>
               Adress
-              <hr className="my-3" />
+              <hr className="my-3 border-purple-700" />
             </h4>
             <h5 className="text-lg mt-0 mb-2 text-blueGray-600  text-gray-300">
               Kungsgatan 2
@@ -349,7 +349,7 @@ export default function Contact() {
           </div>
           <div>
             <h4 className="text-3xl font-semibold text-white">
-              Öppettider <hr className="my-3" />
+              Öppettider <hr className="my-3 border-purple-700" />
             </h4>
             <h5 className="text-lg mt-0 mb-2 text-gray-300">
               Måndag-Fredag 11:00-15:00 <br /> Lördag 11:00-15:00

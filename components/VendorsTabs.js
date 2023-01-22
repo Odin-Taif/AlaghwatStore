@@ -9,88 +9,33 @@ function classNames(...classes) {
 
 export default function VendorsTabs({ productsData }) {
   console.log(productsData);
+  const { vendor } = productsData;
   return (
-    <div className="w-full px-0 py-2 ">
+    <div className="w-full flex flex-col md:flex-row px-0 py-50 border-t-2 border-b-2 border-purple-700">
       {productsData.map((vendor) => (
-        // <Tab
-        //   key={vendor._id}
-        //   className={({ selected }) =>
-        //     classNames(
-        //       "w-full rounded-lg py-2.5 text-sm font-medium leading-5",
-        //       "ring-opacity-60 ring-offset-1 ring-offset-pink-300 focus:outline-none focus:ring-2",
+        <Link
+          href={`/vendor/${vendor.slug.current}`}
+          key={vendor._id}
+          className=" w-full flex flex-col mx-auto my-2 p-2 items-center justify-center rounded-sm bg-teal-100 hover:bg-teal-300 border-l-2 border-white"
+        >
+          <div
+            className="flex mx-auto items-center justify-center h-40 w-40 bg-cover rounded-full border-2  border-y-teal-300 cursor-pointer "
+            style={{
+              backgroundImage: `url('${urlFor(vendor.logo)
+                .auto("format")
+                .fit("crop")
+                .width(200)
+                .quality(80)}`,
+            }}
+          />
 
-        //       selected ? " shadow" : " hover:bg-pink-100  hover:text-white"
-        //     )
-        //   }
-        // >
-        <Link href={`/vendor/${vendor.slug.current}`}>
-          <BrandCard key={vendor._id} {...vendor} />
+          <div className="px-5 py-3 ">
+            <h3 className="text-center text-gray-700 uppercase">
+              {vendor.title}
+            </h3>
+          </div>
         </Link>
-
-        // </Tab>
       ))}
-      <Tab.Group>
-        {/* <Tab.List className="flex space-x-1 rounded-xl bg-teal-50 p-1">
-          {productsData.map((vendor) => (
-            // <Tab
-            //   key={vendor._id}
-            //   className={({ selected }) =>
-            //     classNames(
-            //       "w-full rounded-lg py-2.5 text-sm font-medium leading-5",
-            //       "ring-opacity-60 ring-offset-1 ring-offset-pink-300 focus:outline-none focus:ring-2",
-
-            //       selected ? " shadow" : " hover:bg-pink-100  hover:text-white"
-            //     )
-            //   }
-            // >
-            <BrandCard key={vendor._id} {...vendor} />
-            // </Tab>
-          ))}
-        </Tab.List> */}
-
-        {/* <Tab.Panels className="mb-80 rounded-xl">
-          {productsData.map((vendor) => (
-            <Tab.Panel
-              key={vendor._id}
-              className={classNames(
-                "bg-white p-1",
-                "ring-white ring-opacity-60"
-              )}
-            >
-              <ul className="grid gap-2 grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-2">
-                {vendor.brands.map((brand) => (
-                  <li
-                    key={brand._id}
-                    className="flex justify-between flex-col relative rounded-md p-3 m-1 bg-gray-100 hover:bg-pink-100"
-                  >
-                    <h3 className="text-md font-medium p-3">{brand.title}</h3>
-                    <div className="flex justify-center ">
-                      <div
-                        className="h-20 w-20 md:w-40 md:h-40 bg-cover"
-                        style={{
-                          backgroundImage: `url('${urlFor(brand.mainImage)
-                            .auto("format")
-                            .fit("crop")
-                            .width(200)
-                            .quality(100)}`,
-                        }}
-                      />
-                    </div>
-
-                    <Link
-                      href={`/devices/${brand.slug.current}`}
-                      className={classNames(
-                        "absolute inset-0 rounded-xl",
-                        "ring-blue-400 focus:z-10 focus:outline-none focus:ring-2"
-                      )}
-                    />
-                  </li>
-                ))}
-              </ul>
-            </Tab.Panel>
-          ))}
-        </Tab.Panels> */}
-      </Tab.Group>
     </div>
   );
 }

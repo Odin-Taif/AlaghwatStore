@@ -1,7 +1,7 @@
 import Error from "next/error";
 import { groq } from "next-sanity";
 import { useRouter } from "next/router";
-import ProductPage from "../../components/ProductPage";
+import ProductPage from "../../components/DevicePages";
 import { getClient, usePreviewSubscription } from "../../utils/sanity";
 import Devicetype from "../../components/Devicetype";
 
@@ -19,7 +19,7 @@ const query = `*[_type == "vendor" && slug.current == $slug][0]{
   "brands": *[_type == "brand" && references(^._id)]{title, ...},slug
 }
 `;
-function ProductPageContainer({ productData, preview }) {
+function VendorPageContainer({ productData, preview }) {
   console.log(productData);
   const router = useRouter();
   if (!router.isFallback && !productData?.slug) {
@@ -61,4 +61,4 @@ export async function getStaticPaths() {
   };
 }
 
-export default ProductPageContainer;
+export default VendorPageContainer;

@@ -1,9 +1,9 @@
 import Error from "next/error";
 import { groq } from "next-sanity";
 import { useRouter } from "next/router";
-import ProductPage from "../../components/ProductPage";
+import ProductPage from "../../components/DevicePages";
 import { getClient, usePreviewSubscription } from "../../utils/sanity";
-import Device from "../../components/Device";
+import Device from "../../components/ProductPages";
 
 const query = `*[_type == "brand" && slug.current == $slug][0]{
   _id, title,
@@ -27,7 +27,6 @@ function ProductPageContainer({ productData, preview }) {
   const { _id, title, products, mainImage, services, body, slug } = product;
   return (
     <>
-      <h1>FSDAF</h1>
       <Device
         id={_id}
         title={title}

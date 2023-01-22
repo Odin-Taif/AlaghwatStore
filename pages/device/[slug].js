@@ -1,20 +1,19 @@
 import Error from "next/error";
 import { groq } from "next-sanity";
 import { useRouter } from "next/router";
-import ProductPage from "../../components/ProductPage";
+import ProductPage from "../../components/DevicePages";
 import { getClient, usePreviewSubscription } from "../../utils/sanity";
 // import CompanyProducts from "../../components/companyProducts";
 
 // const query = groq`*[_type == "brand" && slug.current == $slug][0]`;
 
-const query = `*[_type == "brand" && slug.current == $slug][0]{
+const query = `*[_type == "product" && slug.current == $slug][0]{
   _id, title,
-  "products": *[_type == "product" && references(^._id)]{title, ...},
-  ...
+...
 }
 `;
-function ProductPageContainer({ productData, preview }) {
-  // console.log(productData);
+function DevicePageContainer({ productData, preview }) {
+  console.log(productData);
   const router = useRouter();
   if (!router.isFallback && !productData?.slug) {
     return <Error statusCode={404} />;
@@ -26,18 +25,9 @@ function ProductPageContainer({ productData, preview }) {
     enabled: preview || router.query.preview !== null,
   });
 
-  const { _id, title, products, mainImage, body, slug } = product;
   return (
     <>
-      <h1>fjasdkfja</h1>
-      {/* <CompanyProducts
-        id={_id}
-        title={title}
-        products={products}
-        mainImage={mainImage}
-        body={body}
-        slug={slug?.current}
-      /> */}
+      <ProductPage {...productData} />
     </>
   );
 }
@@ -54,7 +44,7 @@ export async function getStaticProps({ params, preview = false }) {
 
 export async function getStaticPaths() {
   const paths = await getClient().fetch(
-    `*[_type == "brand" && defined(slug.current)][].slug.current`
+    `*[_type == "product" && defined(slug.current)][].slug.current`
   );
 
   return {
@@ -63,4 +53,4 @@ export async function getStaticPaths() {
   };
 }
 
-export default ProductPageContainer;
+export default DevicePageContainer;

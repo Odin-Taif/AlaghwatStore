@@ -34,16 +34,16 @@ const features = [
 
 export default function About() {
   return (
-    <div className="bg-white">
+    <div className="bg-black">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="sm:text-center">
           {/* <h2 className="text-lg font-semibold leading-8 text-indigo-600">
             Transactions
           </h2> */}
-          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             A better way to send money
           </p>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white">
             Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
             voluptatum cupiditate veritatis in accusamus quisquam.
           </p>
@@ -60,10 +60,10 @@ export default function About() {
                   <feature.icon className="h-8 w-8" aria-hidden="true" />
                 </div>
                 <div className="sm:min-w-0 sm:flex-1">
-                  <p className="text-lg font-semibold leading-8 text-gray-900">
+                  <p className="text-lg font-semibold leading-8 text-white">
                     {feature.name}
                   </p>
-                  <p className="mt-2 text-base leading-7 text-gray-600">
+                  <p className="mt-2 text-base leading-7 text-white">
                     {feature.description}
                   </p>
                 </div>

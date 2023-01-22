@@ -9,12 +9,12 @@ import {
 export default function Footer() {
   return (
     <>
-      <footer className="relative  pt-8 pb-6  bg-slate-400">
+      <footer className="relative  pt-8 pb-6  bg-black">
         <div
           className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
           style={{ transform: "translateZ(0)" }}
         >
-          <hr className="my-6 border-blueGray-300" />
+          <hr className="my-6 border-purple-700" />
           <svg
             className="absolute bottom-0 overflow-hidden"
             xmlns="http://www.w3.org/2000/svg"
@@ -30,9 +30,9 @@ export default function Footer() {
             <div className="w-full lg:w-6/12 px-4">
               <h4 className="text-3xl font-semibold text-white">
                 Öppettider:
-                <hr className="my-3" />
+                <hr className="my-3 border-purple-700" />
               </h4>
-              <h5 className="text-lg mt-0 mb-2 text-blueGray-600">
+              <h5 className="text-lg mt-0 mb-2  text-white">
                 Måndag-Fredag 11:00-15:00 <br /> Lördag 11:00-15:00
                 <br />
                 <span className="text-red-500"> Söndag Stängt</span>
@@ -41,27 +41,27 @@ export default function Footer() {
                 <a
                   href="https://www.instagram.com/vasteras_tech_ab/?igshid=YmMyMTA2M2Y="
                   target="_blank"
-                  className="bg-white  p-2 text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2  hover:bg-sky-700"
+                  className=" p-2 text-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2  hover:bg-sky-700"
                 >
                   <FaInstagram size={20} className="mx-auto" />
                 </a>
                 <a
                   href="https://www.facebook.com/people/V%C3%A4ster%C3%A5s-Tech/100083006367510/"
                   target="_blank"
-                  className="bg-white p-2 text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2  hover:bg-sky-700"
+                  className="p-2 text-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2  hover:bg-sky-700"
                 >
                   <FaFacebookF size={20} className="mx-auto" />
                 </a>
 
                 <a
                   href="mailto:vasteras.tech@gmail.com"
-                  className="bg-white p-2 text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2  hover:bg-sky-700"
+                  className="p-2 text-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2  hover:bg-sky-700"
                 >
                   <FaMailBulk size={20} className="mx-auto" />
                 </a>
                 <a
                   href="tel:+46769136931"
-                  className="bg-white p-2 text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2  hover:bg-sky-700"
+                  className=" p-2 text-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2  hover:bg-sky-700"
                 >
                   <FaMobileAlt size={20} className="mx-auto" />
                 </a>
@@ -70,10 +70,10 @@ export default function Footer() {
             <div className="w-full lg:w-6/12 px-4">
               <div className="flex flex-wrap items-top mb-6">
                 <div className="w-full lg:w-4/12 px-4">
-                  <span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2">
+                  <span className="block uppercase text-white text-sm font-semibold mb-2">
                     Mer info
                   </span>
-                  <ul className="list-unstyled">
+                  <ul className="list-unstyled text-white">
                     <li>
                       <Link
                         className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
@@ -103,10 +103,10 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <hr className="my-6 border-blueGray-300" />
+          <hr className="my-6 border-purple-700" />
           <div className="flex flex-wrap items-center md:justify-between justify-center">
             <div className="w-full md:w-4/12 px-4 mx-auto text-center">
-              <div className="text-sm text-blueGray-500 font-semibold py-1">
+              <div className="text-sm text-blueGray-500 font-semibold py-1 text-white">
                 Copyright © {new Date().getFullYear()} | Västerås Tech AB.
                 <br />
                 <span> powered by | </span>

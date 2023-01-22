@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { urlFor, PortableText, getClient } from "../utils/sanity";
-import ServicesList from "../components/ServicesList";
-function ProductPage(props) {
+import ServicesList from "./ServicesList";
+function ProductPage({ title, services, mainImage, body }) {
   // // const [count, setCount] = useState(1);
   // const handleCount = (value) =>
   //   !(count === 0 && value === -1) ? setCount(count + value) : count;
-  const { title, products, services, mainImage, body } = props;
+
   return (
     <div className="container mx-auto px-6">
       <div className="md:flex md:items-center">
