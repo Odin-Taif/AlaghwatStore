@@ -16,7 +16,7 @@ export default function VendorsTabs({ productsData }) {
         <Link
           href={`/vendor/${vendor.slug.current}`}
           key={vendor._id}
-          className=" w-full flex flex-col mx-auto my-2 p-2 items-center justify-center rounded-sm bg-teal-100 hover:bg-teal-300 border-l-2 border-white"
+          className=" w-full flex flex-col mx-auto my-2 p-2 items-center justify-center rounded-sm bg-purple-100 hover:bg-teal-400 border-l-2 border-white"
         >
           <div
             className="flex mx-auto items-center justify-center h-40 w-40 bg-cover rounded-full border-2  border-y-teal-300 cursor-pointer "
@@ -30,9 +30,7 @@ export default function VendorsTabs({ productsData }) {
           />
 
           <div className="px-5 py-3 ">
-            <h3 className="text-center text-gray-700 uppercase">
-              {vendor.title}
-            </h3>
+            <h3 className="text-center text-white uppercase">{vendor.title}</h3>
           </div>
         </Link>
       ))}

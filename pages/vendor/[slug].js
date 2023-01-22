@@ -20,7 +20,7 @@ const query = `*[_type == "vendor" && slug.current == $slug][0]{
 }
 `;
 function VendorPageContainer({ productData, preview }) {
-  console.log(productData);
+  // console.log(productData);
   const router = useRouter();
   if (!router.isFallback && !productData?.slug) {
     return <Error statusCode={404} />;
