@@ -8,7 +8,7 @@ function classNames(...classes) {
 }
 
 export default function VendorsTabs({ productsData }) {
-  console.log(productsData);
+//   console.log(productsData);
   const { vendor } = productsData;
   return (
     <div className="w-full flex flex-col md:flex-row px-0 py-50 border-t-2 border-b-2 border-purple-700">
