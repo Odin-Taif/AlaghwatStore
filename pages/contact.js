@@ -37,7 +37,7 @@ import { FiMapPin } from "react-icons/fi";
 const query = `*[_type == "siteConfig"]`;
 export default function Contact({ productData }) {
   const siteconfig = productData[0];
-  console.log(siteconfig);
+//   console.log(siteconfig);
 
   const {
     register,
