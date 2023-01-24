@@ -124,7 +124,7 @@ export default function Contact({ productData }) {
                       className="text-white m-2 hover:text-red-500 "
                     />
                   </div>
-                  <hr className="my-3 border-purple-700" />
+                  <hr className="my-3 border-teal-700" />
                 </h4>
                 <h5 className="text-lg mt-0 mb-2 text-blueGray-600  text-gray-300">
                   Kungsgatan 2

@@ -29,7 +29,7 @@ export default function Footer() {
             <div className="w-full lg:w-6/12 px-4">
               <h4 className="text-3xl font-semibold text-white">
                 Öppettider:
-                <hr className="my-3 border-purple-700" />
+                <hr className="my-3 border-teal-700" />
               </h4>
               <h5 className="text-lg mt-0 mb-2  text-white">
                 Måndag-Fredag 11:00-15:00 <br /> Lördag 11:00-15:00
@@ -102,7 +102,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <hr className="my-6 border-purple-700" />
+          <hr className="my-2 border-teal-700" />
           <div className="flex flex-wrap items-center md:justify-between justify-center">
             <div className="w-full md:w-4/12 px-4 mx-auto text-center">
               <div className="text-sm text-blueGray-500 font-semibold py-1 text-white">
